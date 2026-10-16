@@ -1,0 +1,25 @@
+Package: zigimports
+Type: Package
+Title: Call 'Zig' Code from R
+Version: 0.1.0
+Authors@R: c(
+    person("Lakshya", "Sharma", email = "lakshya6115@gmail.com",
+           role = c("aut", "cre")),
+    person("Amrit", "Pal", email = "amrit.pal@vit.ac.in", role = "aut"))
+Description: Loads shared libraries compiled from 'Zig' ('.so' files on Linux,
+    '.dll' files on Windows) and binds their exported functions to R
+    functions. Arguments are passed by value using the native calling
+    convention, so functions with mixed integer, double, logical, string and
+    vector arguments and with return values can be called. Also compiles and
+    runs 'Zig' code directly from R. Compiling code requires the 'Zig'
+    compiler.
+URL: https://github.com/lokop5116/zigimports
+BugReports: https://github.com/lokop5116/zigimports/issues
+License: GPL-3
+Encoding: UTF-8
+Depends: R (>= 3.5.0)
+SystemRequirements: 'Zig' compiler (>= 0.11), only needed for zig_call()
+    and to build libraries
+Suggests: testthat (>= 3.0.0)
+Config/testthat/edition: 3
+RoxygenNote: 7.3.2
