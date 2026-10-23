@@ -62,7 +62,3 @@ zig_call("x[0] *= 2;", x = c(1, 2))$x               # 2 2
 - Zig code runs inside the R process: a crash in Zig crashes R.
 - Not supported: `f32`, 64-bit integers, structs, callbacks, returning pointers other than strings.
 - Fill in the author name and email in `DESCRIPTION` (`Authors@R`) before submitting to CRAN.
-
-## Testing
-
-See [TESTING.md](TESTING.md) for how to run the C-level, unit and integration tests and `R CMD check`.
