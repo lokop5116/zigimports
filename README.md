@@ -9,7 +9,12 @@ Call [Zig](https://ziglang.org) code from R. Works on **Linux** (`.so`) and **Wi
 | `zig_call(code, ..., fn)` | Compile and run arbitrary Zig code from inside R |
 
 ## Install
+Install from CRAN
+```r
+install.packages("zigimports")
+```
 
+Download from releases and install locally
 ```r
 install.packages("path/to/zigimports_0.1.0.tar.gz", repos = NULL, type = "source")
 ```
@@ -61,4 +66,3 @@ zig_call("x[0] *= 2;", x = c(1, 2))$x               # 2 2
 ## Notes
 - Zig code runs inside the R process: a crash in Zig crashes R.
 - Not supported: `f32`, 64-bit integers, structs, callbacks, returning pointers other than strings.
-- Fill in the author name and email in `DESCRIPTION` (`Authors@R`) before submitting to CRAN.
